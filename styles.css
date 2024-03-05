@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+/* imports special font from external online librabry*/
+
+:root{
+    --nav-bg: rgb(21, 17, 33);/* creates a variable and assigns a value*/
+}
+
+html{ 
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif ;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*========= NAV BAR =========*/ 
+
+.main-nav-bar{
+    position: fixed;
+    background-color: var(--nav-bg);
+    width: 100%;
+    z-index: 500;
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+}
+
+.sub-nav-1,
+.sub-nav-2{
+    display:flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.nav-bar{
+    width: 50%;    
+}
+
+.nav-bar a{
+    text-decoration: none;
+    color: white;
+    padding-right: 12px;
+    padding-left: 12px;
+    transition: color 0.2s;
+}
+
+.nav-bar a:hover{
+    color: rgb(85, 85, 85);
+}
+
+.logo{
+    width: 80px;
+    height: auto;
+    float: left;
+    padding-left: 25px;
+    z-index: 501;
+}
+
+span{
+    color: white;
+    transition: color 0.2s;
+    padding-right: 3rem;
+    padding-top: 2rem;
+}
+
+span:hover{
+    color: rgb(85, 85, 85);
+}
+
+/*========= SECOND ROW (INFO) =========*/ 
+
+.info-container{
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    background-image: url(backdrop-image.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-left: 20px;
+    position: absolute;
+    top: 90px; right: 0; left: 0;
+    z-index: 0;
+}
+
+.info-container h3{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.info-container p{
+    font-size: 1rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: white;
+}
+
+.content{
+    padding-left: 1rem;
+    width: 45%;
+}
+
+button{
+    background-color: var(--nav-bg);
+    border-radius: 10px;
+    border: solid var(--nav-bg);
+    padding: 7px 12px;
+    color: white;
+    width: fit-content;
+    transition: all 0.2s;
+}
+
+button:hover{
+    background-color: white;
+    border-color: white;
+    color: var(--nav-bg);
+    cursor: pointer;
+}
+
+/*========= Products =========*/ 
+
+.container{
+    background-color: aliceblue;
+    position: relative;
+    top: 700px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.container a{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.image{
+    width: 180px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.products_container{
+    background-color: white;
+    width: 200px;
+    height: 280px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.125s;
+}
+
+.products_container:hover{
+    padding: 1px;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+hr{
+    width: 88%;
+    margin-right: auto;
+    margin-left: auto;
+    color: black;
+}
+
+/*========= FOOTER =========*/
+
+.socials-bar{
+    position: absolute;
+    top: 71rem;
+    width: 100%;
+    background-color: var(--nav-bg);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.socials-bar .heading{
+    text-decoration: underline;
+}
+
+.socials-bar li a{
+    text-decoration: none;
+    color: white;
+    transition: color 0.2s;
+    padding-left: 10px;
+}
+
+.socials-bar a:hover,
+.about-socials-bar a:hover{
+    color: rgb(85, 85, 85);
+}
+
+.footer-content li a{
+    text-decoration: none;
+    color: white;
+    transition: color 0.2s;
+    padding-left: 10px;
+}
+
+.about-info-container{
+    padding: 8rem 5rem 3rem 5rem;
+}
+
+.about-info-container p{
+    padding-left: 10px;
+}
+
+.about-socials-bar{
+    margin-top: auto;
+    width: 100%;   
+    background-color: var(--nav-bg);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.heading{
+    text-decoration: underline;
+    font-size: larger;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.icons{
+    width: 25px;
+    height: auto;
+    padding-right: 13px;
+    padding-left: 13px;
+    border-radius: 12px;
+}
+
+.icons:hover{
+    background-color: rgb(85, 85, 85);
+
+}
+
+/*========= Contact html =========*/
+.feedback{
+    position: absolute;
+    top: 100px; right: 25%; left: 25%;
+    width: 50%;
+    height: 25rem;
+    padding-top: 20px;
+    background: url(Logo.png);
+    background-position: center;
+    background-repeat: none;
+}
+
+.name-email,
+.number-subject,
+.textarea{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    opacity: 0.8;
+}
+
+input{
+    width: 45%;
+    padding: 5px;
+    border: solid var(--nav-bg);
+    border-radius: 12px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+textarea{
+    width: 98%;
+    height: 15rem;
+    border: solid var(--nav-bg);
+    border-radius: 12px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.submit-btn{
+    position: absolute;
+    right: 25%; left: 25%;
+    width: 50%;
+}
+
+.submit-btn:hover{
+    opacity: 0.8;
+}
+
+/*========= Purchase Section =========*/
+
+main{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 100px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.order-product-now-btn{
+    background-color: green;
+    border-color: green;
+    padding: 3px 15px;
+    transition: all 0.2s ;
+    color: white;
+    width: 100%;
+    height: 40px;
+    font-size: larger;
+}
+
+.order-product-now-btn:hover{
+    border-color: var(--nav-bg);
+    background-color: var(--nav-bg);
+    color: white;
+}
+
+.order-product-now-btn:active{
+    opacity: 0.3;
+}
+
+.image-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    padding: 15px;
+}
+
+.image-container img{
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-info{
+    width: 30%;
+    padding: 20px;
+}
+
+.order-now{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
